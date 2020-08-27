@@ -1,0 +1,206 @@
+.feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+    margin-right: 30px;
+    margin-bottom: 80px;
+    margin-left: 30px;
+
+    @include desktop {
+
+    }
+    
+
+    &__text {
+        text-align: center;
+        margin-bottom: 75px;
+
+        @include desktop {
+            margin-bottom: 65px;
+        }
+        
+        h2 {
+            color: $veryDarkBlue;
+
+            @include desktop {
+                font-size: 2.1rem;
+            }
+            &:first-child {
+                font-weight: $fontLight;
+            }
+
+            &:nth-child(2) {
+                @include desktop {
+                    margin-bottom: 15px;
+                }
+            }
+
+           
+        }
+        p {
+            color: $grayishBlue;
+
+            @include desktop {
+                width: 513px;
+                font-size: .9rem;
+            }
+        }
+    }
+
+    &__card {
+        position: relative;
+        display: flex;
+        width: 310px;
+        height: 225px;
+        background-color: white;
+        margin-bottom: 25px;
+        border-radius: 10px;
+        box-shadow: 7px 10px 15px 0px rgba(0,0,0,0.1);
+        overflow: hidden;
+
+        @include desktop {
+            width: 350px;
+            height: 250px;
+
+        }
+
+        
+        &__info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 257px;
+            height: 163px;
+            margin: 31px 27px 28px 26px;
+
+            @include desktop {
+                justify-content: space-evenly;
+                width: unset;
+                height: unset;
+                margin: 9px 27px 23px 29px;
+            }
+        }
+
+        &__title {
+            color: $veryDarkBlue;
+
+            @include desktop {
+                font-size: 1.3rem;
+            }
+        }
+
+        p {
+            margin-top: -0.75rem;
+            font-size: .82rem;
+            line-height: 1.4rem;
+            color: $grayishBlue;
+        }
+
+        .img {
+            background-image: url(/images/icon-supervisor.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 59px;
+            height: 59px;
+            margin-left: auto;            
+        }
+
+        .img-builder {
+            background-image: url(/images/icon-team-builder.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 59px;
+            height: 59px;
+            margin-left: auto; 
+
+        }
+
+        .img-karma {
+            background-image: url(/images/icon-karma.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 59px;
+            height: 59px;
+            margin-left: auto; 
+        }
+
+        .img-calc {
+            background-image: url(/images/icon-calculator.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 59px;
+            height: 59px;
+            margin-left: auto; 
+        }
+        
+    }
+}
+
+.cyan {
+
+    @include desktop {
+        position: absolute;
+        right: 375px;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        height: 4px;
+        width: 350px;
+        background-color: $cyan;
+    }
+}
+
+.red {
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        height: 4px;
+        width: 350px;
+        background-color: $red;
+    }
+}
+
+.orange {
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        height: 4px;
+        width: 350px;
+        background-color: $orange;
+    }
+}
+
+.blue {
+    margin-bottom: 75px;
+
+    @include desktop {
+        position: absolute;
+        left: 375px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        height: 4px;
+        width: 350px;
+        background-color: $blue;
+    }
+}
+
+.card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+    @include desktop {
+        justify-content: center;
+        align-items: center;
+    }
+}
